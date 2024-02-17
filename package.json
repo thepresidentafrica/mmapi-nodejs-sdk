@@ -34,7 +34,8 @@
   "scripts": {
     "test": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
     "change": "changeset",
-    "tag": "changeset version && vs=$(jq '.version' package.json) echo \"$vs\">>deploy/versions.txt && git add . && git commit -m \"new version $vs\" && git push",
+    "v": "vs=noocash@$(jq -r '.version' package.json)",
+    "tag": "pnpm changeset version && vs=noocash@$(jq -r '.version' package.json) && echo \"version $vs\">>deploy/versions.txt && git add . && git commit -m \"new version $vs\" && git push",
     "test-ci": "jest --detectOpenHandles --forceExit --coverage"
   },
   "jest": {
