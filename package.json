@@ -1,6 +1,6 @@
 {
   "name": "@thepresidentafrica/noocash-sdk",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "This is the official SDK clone for the [GSMA Mobile Money API Specification 1.2.0](https://developer.mobilemoneyapi.io/1.2).",
   "main": "index.js",
   "publishConfig": {
@@ -26,12 +26,15 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "dotenv": "^10.0.0",
     "jest": "^27.2.5",
     "nock": "^13.2.1"
   },
   "scripts": {
     "test": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
+    "change": "changeset",
+    "tag": "changeset version && vs=$(jq '.version' package.json) echo \"$vs\">>deploy/versions.txt && git add . && git commit -m \"new version $vs\" && git push",
     "test-ci": "jest --detectOpenHandles --forceExit --coverage"
   },
   "jest": {
