@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - develop
+    paths:
+      - "deploy/**"
 
 jobs:
   build:
@@ -30,8 +32,3 @@ jobs:
         run: npm publish --access public --registry https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN }}
-
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN }}
