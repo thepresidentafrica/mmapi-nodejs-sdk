@@ -1,5 +1,5 @@
 {
-  "name": "@thepresidenstafrica/noocash-sdk",
+  "name": "@thepresidentafrica/noocash-sdk",
   "version": "0.0.10",
   "description": "This is the official SDK clone for the [GSMA Mobile Money API Specification 1.2.0](https://developer.mobilemoneyapi.io/1.2).",
   "main": "index.js",
