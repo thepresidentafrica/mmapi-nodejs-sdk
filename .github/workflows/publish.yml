@@ -1,9 +1,9 @@
-name: Publish
+name: Publish noocash SDK
 
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   build:
