@@ -1,8 +1,20 @@
 {
-  "name": "mmapi-nodejs-sdk",
-  "version": "1.0.0",
-  "description": "",
+  "name": "noocash-sdk",
+  "version": "0.0.10",
+  "description": "This is the official SDK clone for the [GSMA Mobile Money API Specification 1.2.0](https://developer.mobilemoneyapi.io/1.2).",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "package.json",
+    "README.md"
+  ],
+  "bin": {
+    "noocash": "index.js"
+  },
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -25,13 +37,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gsmainclusivetechlab/mmapi-nodejs-sdk.git"
+    "url": "git+https://github.com/thepresidenstafrica/mmapi-nodejs-sdk.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mobile mmoney",
+    "Money transfer",
+    "GSMA",
+    "nodejs",
+    "SDK",
+    "SDK clone",
+    "noocash"
+  ],
+  "author": "Mitch Chanza <me@mitch.guru>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gsmainclusivetechlab/mmapi-nodejs-sdk/issues"
+    "url": "https://github.com/thepresidenstafrica/mmapi-nodejs-sdk/issues"
   },
-  "homepage": "https://github.com/gsmainclusivetechlab/mmapi-nodejs-sdk#readme"
+  "homepage": "https://github.com/thepresidenstafrica/mmapi-nodejs-sdk#readme"
 }
